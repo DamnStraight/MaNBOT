@@ -1,0 +1,22 @@
+{
+  "name": "manbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/*.ts --outDir dist",
+    "addcom": "node dist/deploy_command.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.13",
+    "discord.js": "^13.6.0",
+    "dotenv": "^14.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
