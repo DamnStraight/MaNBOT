@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 import { Client, Intents } from 'discord.js';
-import { getGuildEmotes, loadImageFolder } from './commands/xmas';
+import { loadImageFolder } from './commands/xmas';
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -20,7 +20,7 @@ client.on('interactionCreate', async interaction => {
 	{
 		const guild = interaction.guild;
 
-		await getGuildEmotes(guild);
+		// const originalEmojis = await getGuildEmotes(guild);
 
 		// TODO
 		await interaction.reply('Thank you sir');
