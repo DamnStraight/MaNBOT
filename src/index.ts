@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 import { Client, Intents } from 'discord.js';
-import { loadImageFolder } from './commands/xmas';
+import { loadImageFolder } from './commands/theme-emotes';
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -16,12 +16,13 @@ client.on('interactionCreate', async interaction => {
 
 	const { commandName } = interaction;
 
-	if (commandName === 'xmas')
+	if (commandName === 'seasonalemotes')
 	{
 		const guild = interaction.guild;
 
 		// const originalEmojis = await getGuildEmotes(guild);
 
+		await interaction.channel?.send('heh');
 		// TODO
 		await interaction.reply('Thank you sir');
 	}
